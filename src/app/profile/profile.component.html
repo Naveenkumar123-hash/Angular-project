@@ -1,0 +1,4 @@
+<div *ngFor="let user of usersData">
+    <span (click)="getuser(user.id)">{{user.firstName}}</span>
+</div>
+<router-outlet></router-outlet>

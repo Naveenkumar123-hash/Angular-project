@@ -1,0 +1,37 @@
+<!-- <label for="name">Name: </label>
+<input id="name" type="text" [formControl]="name">
+<button (click)="changefn()">change</button>
+{{name.value}} -->
+<!-- <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+    <label for="name" id="name">name</label>
+    <input type="text" formControlName="firstName"/>
+    <input type="text" formControlName="lastName"/>
+    <button type="submit">Submit</button>
+</form> -->
+<form [formGroup]="my_form" (ngSubmit)="onsubmit()">
+    <label for="name" name="name">Name</label><br>
+    <input type="text" name="name" placeholder="name" formControlName="name"/><br>
+    <label for="age" name="age">Age</label><br>
+    <input type="number" name="age" placeholder="age" formControlName="age"/><br>
+    <div formGroupName="address">
+        <label for="street" name="street">Street</label><br>
+        <input type="text" name="street" placeholder="street" formControlName="street"/><br>
+        <label for="place" name="place">Place</label><br>
+        <input type="text" name="place" placeholder="place" formControlName="place"/><br>
+        <label for="name" name="zipcode">zipcode</label><br>
+        <input type="number" name="zipcode" placeholder="zipcode" formControlName="zipcode"/><br>
+    </div>
+    <div formGroupName="qualification">
+        <div formGroupName="college">
+            <label for="degree" name="degree">Degree</label><br>
+            <input type="text" name="degree" placeholder="degree" formControlName="degree"/><br>
+            <label for="passedout" name="passedout">Passedyear</label><br>
+            <input type="date" name="passedout" placeholder="passedout" formControlName="passedout"/><br>
+        </div>
+    </div>
+    <button type="submit">Submit</button>
+</form>
+
+{{my_form.value | json}}
+
+<h1 *ngIf="this.formsrv.saved">File Saved Successfully in local storage</h1>

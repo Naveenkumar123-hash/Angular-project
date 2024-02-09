@@ -1,0 +1,8 @@
+<div style="display: flex;justify-content: space-around;margin-bottom: 1rem;">
+<a routerLink='/'*ngIf="!formsrv.userloggedIn">Login</a>
+<a routerLink='/home'>Home</a>
+<a routerLink="/about">About</a>
+<a routerLink="/profile">Profile</a>
+<a routerLink="/reactive">ReactiveForm</a>
+<button (click)="logout()" *ngIf="formsrv.userloggedout">Logout</button>
+</div>

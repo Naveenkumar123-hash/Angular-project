@@ -1,0 +1,10 @@
+<form #my_form="ngForm" style="display: flex;flex-direction: column;justify-content: center;align-items: center;margin-top: 5rem;">
+    <input type="text" name="name" placeholder="name" [(ngModel)]="name" style="width:29%; padding: 5px;"/><br>
+    <select name="role" [(ngModel)]="role" style="width:30%; padding: 5px;" for="Select Role">
+        <option value="admin" >Admin</option>
+        <option value="user">User</option>
+    </select>
+    <button (click)="submit()" style="width:30%; padding: 5px;">Submit</button>
+</form>
+
+
