@@ -8,6 +8,7 @@ import { ActivatedRouteSnapshot, CanActivateChildFn, CanActivateFn, RouterStateS
 import { FormsService } from "../form/forms.service";
 
 
+
 // @Injectable({
 //   providedIn: 'root'
 // })
@@ -24,8 +25,12 @@ import { FormsService } from "../form/forms.service";
 
 export const AuthGuard:CanActivateFn=(route,state)=>{
   return inject(FormsService).localvalue
+  // 
+ 
 }
 
 export const AuthGuard1:CanActivateChildFn=(route,state)=>{
+  let value=JSON.parse(localStorage.getItem("auth") as string)
   return inject(FormsService).localvalue1
 }
+

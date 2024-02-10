@@ -9,6 +9,14 @@ import { Router } from '@angular/router';
 })
 export class NavbarComponent{
    constructor(public formsrv:FormsService,private router:Router){}
+  // ngOnInit(): void {
+  //   if(localStorage.getItem("auth")){
+  //      this.router.navigate(['/home'])
+  //   }
+  //   else{
+  //     this.router.navigate(['/home'])
+  //   }
+  // }
   
    logout():void{
      this.formsrv.userloggedout=true,

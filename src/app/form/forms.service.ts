@@ -18,7 +18,7 @@ export class FormsService {
       this.localvalue=true;
       this.userloggedout=true
       this.value = JSON.parse(localStorage.getItem("auth") as string);
-      this.localvalue1=this.value?.role==="admin"?true:false
+      this.localvalue1=this.value.role==="admin"?true:false
     } else {
       localStorage.setItem("auth", JSON.stringify({ name: name, role: role }));
       this.value={name:name,role:role}

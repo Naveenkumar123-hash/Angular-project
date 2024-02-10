@@ -27,11 +27,11 @@ const routes: Routes = [
     path:'profile',
     component:ProfileComponent,
     canActivate:[AuthGuard],
+    canActivateChild:[AuthGuard1],
     children:[
       {
         path:'user/:id',
         component:UserComponent,
-        canActivateChild:[AuthGuard1],
       }
     ]
   },
